@@ -35,8 +35,8 @@
     <p class="engenheiro">
       Engenheiro civil e segurança do trabalho
     </p>
-    <p class="text">
-      Olá, bem-vindo ao meu portfolio. Aqui você pode encontrar fotos dos meus projetos estruturais, elétricos, hidráulicos e axecução de obras.
+    <p class="text" *ngFor="let item of sobre">
+      {{ item }}
     </p>
     <p class="name mt-5">
       Redes sociais

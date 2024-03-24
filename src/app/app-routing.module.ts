@@ -1,6 +1,5 @@
 import { RouterModule, Routes } from '@angular/router';
 
-import { AboutComponent } from './pages/about/about.component';
 import { AppComponent } from './app.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -13,13 +12,6 @@ const routes: Routes = [
     component: HomeComponent,
     data: {
       title: 'Início'
-    }
-  },
-  {
-    path: 'sobre',
-    component: AboutComponent,
-    data: {
-      title: 'Sobre mim'
     }
   },
   {

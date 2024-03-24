@@ -8,6 +8,10 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent {
   desktop: boolean = true;
+  sobre: Array<string> = [
+    "Bem-vindo ao meu portfólio profissional! Sou Welkisley Paulo Lata, um engenheiro civil apaixonado pela minha profissão, com 43 anos de idade. Graduei-me na Universidade Anhanguera em 2015 e obtive minha pós-graduação em Engenharia de Segurança do Trabalho na Universidade Cruzeiro do Sul.",
+    "Minha jornada na área da construção civil começou aos 18 anos, quando ingressei no Batalhão de Infantaria do Exército Brasileiro. Foi lá que descobri minha paixão pela construção, motivando-me a seguir meu sonho acadêmico. Após concluir minha graduação, tenho trabalhado como engenheiro projetista e executado obras particulares."
+  ]
 
   iconEmail: string = `
     <svg xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 0 22 22" width="22px">

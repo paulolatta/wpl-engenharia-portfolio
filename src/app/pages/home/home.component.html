@@ -1,0 +1,97 @@
+<div
+  class="area-imagem-principal"
+>
+  <img
+    *ngIf="desktop === true"
+    src="../../../assets/images/image-home.jpg"
+    class="imagem-principal"
+    alt="Imagem inicial"
+  />
+  <img
+    *ngIf="desktop === false"
+    src="../../../assets/images/image-home-celular.jpg"
+    class="imagem-principal"
+    alt="Imagem inicial"
+  />
+
+  <div class="title">
+    <span class="text">WPL <br> Welkisley Paulo Lata <br> Engenheiro Civil <br> Engenheiro de segurança e trabalho</span>
+  </div>
+</div>
+
+<div
+  class="container-principal h-100 m-5"
+  style="max-height: -webkit-fill-available"
+>
+  <div class="p-2 text-center area-perfil col-sm-6">
+    <img
+      src="../../../assets/images/image-perfil.jpg"
+      class="img-fluid image-perfil"
+      alt="foto de perfil"
+    />
+  </div>
+
+  <div class="col-sm-6 text-center mt-4">
+    <p class="engenheiro">
+      Engenheiro civil e segurança do trabalho
+    </p>
+    <p class="text">
+      Olá, bem-vindo ao meu portfolio. Aqui você pode encontrar fotos dos meus projetos estruturais, elétricos, hidráulicos e axecução de obras.
+    </p>
+    <p class="name mt-5">
+      Redes sociais
+    </p>
+
+    <div class="d-flex justify-content-center mt-2">
+      <button
+        style="margin-right: 10px; padding-top: 4px; padding-left: 2px"
+        mat-mini-fab
+        color="primary"
+        (click)="
+          goTo(
+            'https://api.whatsapp.com/send?phone=5548991534886&text=Olá,%20gostaria%20de%20solicitar%20um%20serviço.'
+          )
+        "
+      >
+        <app-icon name="iconWhats" [icon]="iconWhatsApp"></app-icon>
+      </button>
+
+      <button
+        style="margin-right: 10px; padding-top: 4px; padding-right: 2px"
+        mat-mini-fab
+        color="primary"
+        (click)="goTo('mailto:welkilseyengenheiro@gmail.com')"
+      >
+        <app-icon name="iconEmail" [icon]="iconEmail"></app-icon>
+      </button>
+
+      <button
+        style="padding-top: 5px"
+        mat-mini-fab
+        color="primary"
+        (click)="goTo('https://www.instagram.com/paulo.latta')"
+      >
+        <app-icon name="iconInstagram" [icon]="iconInstagram"></app-icon>
+      </button>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

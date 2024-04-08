@@ -14,7 +14,6 @@
   <div class="toHideOnMedia">
     <button mat-button (click)="goTo('')">Home</button>
     <button mat-button (click)="goTo('projetos')">Projetos</button>
-    <button mat-button (click)="goTo('contato')">Contato</button>
   </div>
 
   <button mat-icon-button (click)="gotToWhatsApp()">
@@ -27,7 +26,6 @@
     <mat-nav-list>
       <a mat-list-item (click)="goTo(''); drawer.toggle()"> Home </a>
       <a mat-list-item (click)="goTo('projetos'); drawer.toggle()">Projetos</a>
-      <a mat-list-item (click)="goTo('contato'); drawer.toggle()">Contato </a>
     </mat-nav-list>
   </mat-drawer>
 

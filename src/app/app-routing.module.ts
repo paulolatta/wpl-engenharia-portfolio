@@ -1,7 +1,5 @@
 import { RouterModule, Routes } from '@angular/router';
 
-import { AppComponent } from './app.component';
-import { ContactComponent } from './pages/contact/contact.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NgModule } from '@angular/core';
 import { ProjectsComponent } from './pages/projects/projects.component';
@@ -19,13 +17,6 @@ const routes: Routes = [
     component: ProjectsComponent,
     data: {
       title: 'Projetos'
-    }
-  },
-  {
-    path: 'contato',
-    component: ContactComponent,
-    data: {
-      title: 'Contato'
     }
   }
 ];

@@ -1,5 +1,7 @@
+import { AfterViewInit, Component, OnInit } from '@angular/core';
+
 import { Card } from '../../services/card';
-import { Component } from '@angular/core';
+import { PhotoGalleriaService } from 'src/app/services/photo-galleria.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,8 +9,31 @@ import { Router } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit, AfterViewInit {
   desktop: boolean = true;
+  displayCustom: boolean = false;
+  activeIndex: number = 0;
+  images: any[] | undefined;
+
+  responsiveOptionsGalleria: any[] = [
+    {
+        breakpoint: '1500px',
+        numVisible: 5
+    },
+    {
+        breakpoint: '1024px',
+        numVisible: 3
+    },
+    {
+        breakpoint: '768px',
+        numVisible: 2
+    },
+    {
+        breakpoint: '560px',
+        numVisible: 1
+    }
+];
+
   sobre: Array<string> = [
     "Bem-vindo ao meu portfólio profissional! Sou Welkisley Paulo Lata, um engenheiro civil apaixonado pela minha profissão, com 43 anos de idade. Graduei-me na Universidade Anhanguera em 2015 e obtive minha pós-graduação em Engenharia de Segurança do Trabalho na Universidade Cruzeiro do Sul.",
     "Minha jornada na área da construção civil começou aos 18 anos, quando ingressei no Batalhão de Infantaria do Exército Brasileiro. Foi lá que descobri minha paixão pela construção, motivando-me a seguir meu sonho acadêmico. Após concluir minha graduação, tenho trabalhado como engenheiro projetista e executado obras particulares."
@@ -92,7 +117,11 @@ export class HomeComponent {
     },
   ];
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private photoGalleriaService: PhotoGalleriaService) {}
+
+  ngOnInit(): void {
+    this.photoGalleriaService.getImages().then((images: any) => (this.images = images));
+  }
 
   ngAfterViewInit(): void {
     if (window.innerWidth < 575) {
@@ -102,5 +131,10 @@ export class HomeComponent {
 
   goTo(url: string): void {
     window.open(url, '_blank');
+  }
+
+  imageClick(index: number) {
+    // this.activeIndex = index;
+    // this.displayCustom = true;
   }
 }

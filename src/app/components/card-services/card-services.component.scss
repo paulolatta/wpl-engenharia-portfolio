@@ -13,17 +13,21 @@
 }
 
 .card {
-  width: '240px';
+  width: 260px;
 }
 
 @media (max-width: 575px) {
   .card {
-    width: '160px';
+    width: 245px;
   }
 }
 
 @media (min-width: 1499px) {
   .image {
     height: 260px;
+  }
+
+  .card {
+    width: 340px;
   }
 }

@@ -72,6 +72,18 @@
   font-weight: 700;
 }
 
+.image-service {
+  cursor: pointer;
+  width: 100%;
+  height: 250px;
+}
+
+@media (min-width: 1499px) {
+  .image-service {
+    height: 380px;
+  }
+}
+
 @media (max-width: 575px) {
   .text {
     font-size: 1em;
@@ -85,6 +97,7 @@
     justify-content: space-around;
     flex-wrap: nowrap;
     align-items: center;
+    max-height: -webkit-fill-available
   }
 
   .engenheiro {
@@ -94,5 +107,36 @@
 
   .image-perfil {
     margin-top: 30px;
+  }
+
+  .areaResponsiva {
+    margin-top: 74% !important;
+    max-height: -webkit-fill-available
+  }
+
+  .areaServicos {
+    margin-top: 30% !important;
+  }
+
+  .titleSection {
+    display: flex;
+    align-items: center;
+    margin: 0 !important;
+    padding: 0 !important;
+    padding-top: 40px !important;
+
+    .icon-display {
+      transform: scale(0.9);
+      margin-left: 0;
+    }
+
+    .label {
+      font-size: 22px;
+      font-weight: 500;
+    }
+  }
+
+  .elemento {
+    margin-top: 20px;
   }
 }

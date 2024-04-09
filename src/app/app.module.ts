@@ -7,8 +7,10 @@ import { CardModule } from 'primeng/card';
 import { CardServicesComponent } from './components/card-services/card-services.component';
 import { CarouselModule } from 'primeng/carousel';
 import { ContactComponent } from './pages/contact/contact.component';
+import { GalleriaModule } from 'primeng/galleria';
 import { HomeComponent } from './pages/home/home.component';
 import { IconComponent } from './components/icon/icon.component';
+import { ImageModule } from 'primeng/image';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
@@ -37,7 +39,9 @@ import { ProjectsComponent } from './pages/projects/projects.component';
     MatButtonModule,
     CarouselModule,
     CardModule,
-    ButtonModule
+    ButtonModule,
+    ImageModule,
+    GalleriaModule
   ],
   providers: [],
   bootstrap: [AppComponent]

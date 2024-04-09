@@ -21,7 +21,6 @@
 
 <section
   class="container-principal h-100 m-5"
-  style="max-height: -webkit-fill-available"
 >
   <div class="p-2 text-center area-perfil col-sm-6">
     <img
@@ -78,10 +77,9 @@
 </section>
 
 <section
-  class="h-100 m-5"
-  style="max-height: -webkit-fill-available"
+  class="h-100 m-5 areaResponsiva"
 >
-  <div class="pt-5 m-5 title">
+  <div class="pt-5 m-5 titleSection">
     <mat-icon class="icon-display">  build  </mat-icon>
     <span class="label"> Serviços </span>
   </div>
@@ -92,31 +90,31 @@
     [numScroll]="4"
     [circular]="true"
     [responsiveOptions]="responsiveOptions"
-    [autoplayInterval]="8000"
+    [autoplayInterval]="800000"
   >
     <ng-template let-product pTemplate="item">
-      <div style="margin: 20px;">
+      <div style="margin: 20px 5px;">
         <app-card-services [card]="product"></app-card-services>
       </div>
     </ng-template>
   </p-carousel>
 </section>
 
+<section
+  class="h-100 m-5 areaServicos"
+>
+  <div class="pt-5 m-5 titleSection">
+    <mat-icon class="icon-display">  photo  </mat-icon>
+    <span class="label">Portfólio de obras</span>
+  </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <article class="elemento">
+    <div class="card" style="border: none;">
+      <div class="grid row">
+          <div *ngFor="let image of images; let index = index" class="col-sm-4" key="index">
+              <img class="mb-3 image-service" [src]="image.thumbnailImageSrc" [alt]="image.alt" (click)="imageClick(index)" />
+          </div>
+      </div>
+  </div>
+  </article>
+</section>

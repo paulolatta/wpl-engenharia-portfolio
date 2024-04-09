@@ -1,8 +1,4 @@
 <mat-toolbar>
-  <button mat-icon-button (click)="drawer.toggle()" class="navbtn">
-    <mat-icon>menu</mat-icon>
-  </button>
-
   <img
     class="element"
     (click)="goTo('')"
@@ -11,23 +7,10 @@
   />
   <span class="spacer"></span>
 
-  <div class="toHideOnMedia">
-    <button mat-button (click)="goTo('')">Home</button>
-    <button mat-button (click)="goTo('projetos')">Projetos</button>
-  </div>
-
   <button mat-icon-button (click)="gotToWhatsApp()">
     <app-icon name="iconWhats" [icon]="iconWhatsapp"></app-icon>
   </button>
 </mat-toolbar>
 
-<mat-drawer-container class="container-auto" autosize>
-  <mat-drawer #drawer class="sidenav" mode="over">
-    <mat-nav-list>
-      <a mat-list-item (click)="goTo(''); drawer.toggle()"> Home </a>
-      <a mat-list-item (click)="goTo('projetos'); drawer.toggle()">Projetos</a>
-    </mat-nav-list>
-  </mat-drawer>
+<router-outlet></router-outlet>
 
-  <router-outlet></router-outlet>
-</mat-drawer-container>

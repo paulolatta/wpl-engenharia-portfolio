@@ -18,7 +18,7 @@ export class CardServicesComponent {
 
   solicitar(tipo: string): void {
     window.open(
-      `https://api.whatsapp.com/send?phone=5548996290394&text=Olá, gostaria de solicitar um ${tipo}`,
+      `https://api.whatsapp.com/send?phone=5548991534886&text=Olá, gostaria de solicitar um ${tipo}`,
       '_blank'
     );
   }

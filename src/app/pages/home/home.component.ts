@@ -65,11 +65,6 @@ export class HomeComponent {
       description: 'Desenvolvimento do projeto elétrico utilizando o REVIT.',
     },
     {
-      src: '../../../assets/images/hidraulico.png',
-      title: 'Projeto hidráulico',
-      description: 'Desenvolvimento do projeto hidráulico utilizando o REVIT.',
-    },
-    {
       src: '../../../assets/images/hidrossanitario.jpg',
       title: 'Hidrossanitário',
       description: 'Desenvolvimento do projeto Hidrossanitário utilizando o REVIT.',

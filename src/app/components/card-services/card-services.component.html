@@ -1,0 +1,11 @@
+<p-card class="card" [header]="card.title">
+  <ng-template pTemplate="header">
+      <img alt="Card" [src]="card.src" class="image"/>
+  </ng-template>
+  <p>
+    {{ card.description }}
+  </p>
+  <ng-template pTemplate="footer">
+    <p-button label="Solicitar serviço" (onClick)="solicitar(card.title)" icon="pi pi-check"></p-button>
+  </ng-template>
+</p-card>

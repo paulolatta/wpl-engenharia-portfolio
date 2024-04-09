@@ -1,4 +1,4 @@
-<div
+<section
   class="area-imagem-principal"
 >
   <img
@@ -17,9 +17,9 @@
   <div class="title">
     <span class="text">WPL <br> Welkisley Paulo Lata <br> Engenheiro Civil <br> Engenheiro de segurança e trabalho</span>
   </div>
-</div>
+</section>
 
-<div
+<section
   class="container-principal h-100 m-5"
   style="max-height: -webkit-fill-available"
 >
@@ -75,7 +75,32 @@
       </button>
     </div>
   </div>
-</div>
+</section>
+
+<section
+  class="h-100 m-5"
+  style="max-height: -webkit-fill-available"
+>
+  <div class="pt-5 m-5 title">
+    <mat-icon class="icon-display">  build  </mat-icon>
+    <span class="label"> Serviços </span>
+  </div>
+
+  <p-carousel
+    [value]="items"
+    [numVisible]="4"
+    [numScroll]="4"
+    [circular]="true"
+    [responsiveOptions]="responsiveOptions"
+    [autoplayInterval]="8000"
+  >
+    <ng-template let-product pTemplate="item">
+      <div style="margin: 20px;">
+        <app-card-services [card]="product"></app-card-services>
+      </div>
+    </ng-template>
+  </p-carousel>
+</section>
 
 
 

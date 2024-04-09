@@ -2,6 +2,10 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
+import { ButtonModule } from 'primeng/button';
+import { CardModule } from 'primeng/card';
+import { CardServicesComponent } from './components/card-services/card-services.component';
+import { CarouselModule } from 'primeng/carousel';
 import { ContactComponent } from './pages/contact/contact.component';
 import { HomeComponent } from './pages/home/home.component';
 import { IconComponent } from './components/icon/icon.component';
@@ -20,6 +24,7 @@ import { ProjectsComponent } from './pages/projects/projects.component';
     ProjectsComponent,
     ContactComponent,
     IconComponent,
+    CardServicesComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +34,10 @@ import { ProjectsComponent } from './pages/projects/projects.component';
     MatListModule,
     MatSidenavModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    CarouselModule,
+    CardModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
